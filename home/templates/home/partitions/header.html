@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+{% endblock %}
+
+<div class="container">
+    <div class="container2">
+        <div class="child1">
+            <nav>
+                <ul class="flex-ul">
+                    <li class="haeder-li"> راهنمای خرید</li>
+                    <li class="haeder-li">پیگیری سفارش</li>
+                    <li class="haeder-li">تعرفه هزینهای باربری</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="child1">
+            <nav>
+                <ul class="flex-ul">
+                    <li> <a class="haeder-li" href="https://t.me/yourtelegramusername" target="_blank">
+                            <i class="fab fa-telegram fa-2x"></i>
+                         </a>
+                    </li>
+
+                    <li ><a class="haeder-li" href="https://www.instagram.com/yourinstagramusername" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </li>
+                    <li ><a class="haeder-li" href="https://wa.me/yourphonenumber" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+    <div class="container3">
+        <div class="container4">
+            <div>
+                <img src="{% static 'img/zebra.jpg' %}" alt="zebra shop">
+            </div>
+            
+            <div class="child2">
+                <a href="home/parent/login/login.html" onclick="login()"><img src="{% static 'img/sign.jpg' %}" alt="login"></a>
+            </div>
+            <div>
+                <img class="child2" src="{% static 'img/sabad.jpg' %}" alt="sabad">
+            </div>
+        </div>
+    </div>
+
+    <div class="container5"  >
+        <div class="child3" >
+            <nav >
+                <ul class="flex-ul">
+                    <li class="menu">
+                        خانه
+                    </li >
+                    <li class="menu">
+                        مردانه
+                    </li>
+                    <li class="menu">
+                        زنانه
+                    </li>
+                    <li class="menu">
+                        بچگانه
+                    </li>
+                    <li class="menu">
+                        کیف و کفش
+                    </li>
+                    <li class="menu">
+                        اکسسوری
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</div>
+

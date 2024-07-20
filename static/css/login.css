@@ -1,0 +1,17 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    height: 200px;
+    width: 600px;
+    background-color: darkgrey;
+    grid-column: auto;
+    padding-top: 20px;
+    
+}
+
+.form-child{
+    
+}

@@ -1,0 +1,198 @@
+body{
+  font-family: "vazir";
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir.eot');
+  src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir.woff2') format('woff2'),
+       url('../fonts/Vazir.woff') format('woff'),
+       url('../fonts/Vazir.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir-Bold.eot');
+  src: url('../fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir-Bold.woff2') format('woff2'),
+       url('../fonts/Vazir-Bold.woff') format('woff'),
+       url('../fonts/Vazir-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir-Black.eot');
+  src: url('../fonts/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir-Black.woff2') format('woff2'),
+       url('../fonts/Vazir-Black.woff') format('woff'),
+       url('../fonts/Vazir-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir-Medium.eot');
+  src: url('../fonts/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir-Medium.woff2') format('woff2'),
+       url('../fonts/Vazir-Medium.woff') format('woff'),
+       url('../fonts/Vazir-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir-Light.eot');
+  src: url('../fonts/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir-Light.woff2') format('woff2'),
+       url('../fonts/Vazir-Light.woff') format('woff'),
+       url('../fonts/Vazir-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir-Thin.eot');
+  src: url('../fonts/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir-Thin.woff2') format('woff2'),
+       url('../fonts/Vazir-Thin.woff') format('woff'),
+       url('../fonts/Vazir-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+.container-home-gallery{
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-around;
+  
+}
+
+
+.child-home-gallery1{
+  padding-left: 235px;
+  
+}
+
+
+.child-home-gallery2{
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column-reverse;
+  
+
+}
+
+@keyframes animation{
+  from{top:400px;color: black;}
+  to{top:200px;color: antiquewhite;}
+  
+}
+
+.animation{
+  position: absolute;
+  padding-right: 100px;
+  padding-top: 300px;
+  animation-name: animation;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  
+  
+}
+
+.home1{
+  height: 650px;
+  width: 240%;
+}
+
+
+.home2{
+  margin: 5px;
+  height: 150px;
+  width: 150px;
+
+}
+
+.line{
+    position: relative;
+   
+    margin: 25px ;
+    text-align: center;
+  }
+ 
+.line::before{
+  content:" ";
+  height: 3px;
+  width: 300px;
+  margin-left: 100px;
+  background-color: chocolate;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+  
+.line::after{
+  content: " ";
+  margin-right: 100px;
+  height: 3px;
+  width: 300px;
+  background: chocolate;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+  
+
+.container-kharid{
+  position: relative;
+  display: flex;
+  transform: translateX(-10%);
+  margin-top: 75px;
+  
+
+}
+
+.kharid_img{
+  position: absolute;
+  height: 300px;
+  width: 80%;
+  
+}
+
+
+.hp-kharid{
+  position: absolute;
+  color: aliceblue;
+  height: 200px;
+  width: 400px;
+  top: 60px;
+  transform: translateX(-20px);
+
+}
+
+#questionbox{
+
+margin-left: 130px;
+margin-right: 130px;
+padding-left: 400px;
+height: 400px;
+background-color: darkkhaki;
+text-align: center;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+#questionbox p{
+  padding-top: 10px;
+}
+
+
+.answer{
+  display: none;
+}

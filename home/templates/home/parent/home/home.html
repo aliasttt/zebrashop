@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% extends "home/parent/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-home-gallery">
+    <div class="child-home-gallery1">
+        <img class="home1" src="{% static 'img/amir1.jpg' %}" alt="home-gallery">
+        <h2 class="animation" >خرید مستقیم و آنلاین از
+
+            سایت ترندیول، آمازون، بوینر و.</h2>
+    </div>
+    <div class="child-home-gallery2">
+        <img class="home2"  src="{% static 'img/amir2.jpg' %} " alt="home-gallery">
+        <img class="home2" src="{% static 'img/amir3.jpg' %} " alt="home-gallery">
+        <img class="home2" src="{% static 'img/amir4.jpg' %} " alt="home-gallery">
+        <img class="home2" src=" {% static 'img/amir4.jpg' %}" alt="home-gallery">
+    </div>
+</div>
+
+
+<h1 class="line">خرید از ترکیه</h1>
+
+<div class="container-kharid">
+    
+    <img class="kharid_img" src="{% static 'img/kharid-img.jpg' %}" alt="kharid_az_turkiye">
+    <div class="hp-kharid">
+    <h3 style="text-align: center;">خرید آنلاین از ترکیه</h3>
+    <b><p style="font-size: medium; ">فروشگاه زبرا شاپ با داشتن بیش از 4 سال سابقه حرفه ای در خرید انواع کالا از ترکیه به صورت آنلاین، همچنین با دارا بودن دفتر رسمی در ترکیه این امکان را برای خریداران به وجود آورده است تا با اطمینان از اصالت کالا بتوانند سفارش خود را با خیالی آسوده ثبت نمایند</p></b>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<h1 class="line" >سوال و جواب های پربازدید</h1>
+<br><br><br><br>
+<div id="questionbox">
+    <div>
+        <img src="{% static 'img/question-logo.png' %}" style="width: 300px; height: 300px;" alt="question-logo">
+    </div>
+    <div>
+        <div>
+        <b>چگونه می توانم سفارش خود را ثبت کنم ؟</b>
+        <b><p class="answer" > مشتریان زبرا شاپ عموما به دو دسته تقسیم می شوند. دسته اول مشتریانی هستند که تمایل به خرید یکی از محصولات لیست شده بر روی فروشگاه را دارند که در این صورت خرید خود رو انجام می دهند. دسته دوم مشتریانی هستند که بدنبال تهیه کالایی هستند که بر روی فروشگاه قرار ندارد که در این صورت با ارسال و ثبت لینک کالا، سفارش خود را در فروشگاه ثبت می نمایند.</p></b>
+        </div>
+        <div>  
+        <b><p class="question">نحوه محاسبه قیمت ها به چه صورت است ؟</p></b>
+        <b><p class="answer" > مبالغ محاسبه شده در سایت قیمت نهایی کالا نمی باشد به مبالغ فوق هزینه باربری، هزینه پیک و یا پست اضافه خواهد شد، هزینه باربری برای هر صد گرم مبلغ 38/000 تومان می باشد که کالای خریداری شده در ایران بر اساس وزن واقعی محاسبه شده و به مشتری جهت واریز اطلاع داده خواهد شد</p></b>
+        </div>
+        <div>
+        <b><p class="question">پروسه زمانی دریافت کالا چه مدت است ؟</p></b>
+        <b><p class="answer"  >از زمان دریافت کالا توسط زبرا شاپ در ترکیه زمان تقریبی ارسال به ایران 10 الی 15 روز کاری و سفارشات کفش 15 الی 25 روز کاری خواهد بود.</p></b>
+        </div>
+        <div>
+        <b><p class="question">هزینه ارسال کالا برای تهران و شهرستان چگونه است ؟</p></b>
+        <b><p class="answer" >سفارش شما پس از کنترل نهایی در تهران، برای مشتریان تهران از طریق پیک و برای مشتریان شهرستان از طریق پست به آدرس ثبت شده در سایت ارسال خواهد شد و هزینه مربوطه به عهده خریدار می باشد.</p></b>
+        </div>
+        <div>
+        <b><p class="question">از چه سایت هایی امکان خرید وجود دارد ؟</p></b>
+        <b><p class="answer" >از تمامی برندهای معتبر که در کشور ترکیه نمایندگی دارند امکان خرید برای مشتریان فراهم شده است.</p></b>
+        </div>  
+        <div>
+        <b><p class="question">آیا امکان تغییر آدرس وجود دارد ؟</p></b>
+        <b><p class="answer" >در صورت تغییر آدرس تا دو روز پس از ثبت سفارش می توانید با پشتیبانی زبرا شاپ تماس بگیرید.</p></b>
+        </div>
+        <div>
+        <b><p class="question">تحت چه شرایطی امکان بازگشت کالا وجود دارد ؟</p></b>
+        <b><p class="answer" >متأسفانه طبق قوانین و مقررات زبرا شاپ تعویض و یا بازپس‌گرفتن کالا امکان‌پذیر نیست، و این نکته را توجه داشته باشید که سفارشات قبل از ارسال و تحویل به مشتری از نظر مشکلات کاملا چک می شوند و فقط در صورت مشاهده مشکل و خرابی سفارش شما مرجوع و مبلغ پرداختی به شما برگردانده خواهد شد.</p></b>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}

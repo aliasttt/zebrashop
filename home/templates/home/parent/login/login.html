@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "home/parent/base.html" %}
+{% load static %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="form-container">
+    <form action="" method="post"  class="form">
+      {% csrf_token %}
+      <!---{{form.as_p}}--->
+       <div>
+         <label for="" class="form-child">نام:</label>
+         <input type="text" class="form-child">
+        </div>
+        <div>
+         <label for="" class="form-child">نام خانوادگی</label>
+         <input type="text" class="form-child">
+        </div>
+        <div>
+         <label for="" class="form-child">تلفن همراه</label>
+         <input type="number" pattern="09[0-9]{9}" class="form-child">
+        </div>
+        <div>
+         <label for="" class="form-child">رمز عبور</label>
+         <input type="password" class="form-child">
+        </div>
+        <div>
+         <label for="" class="form-child">ایمیل</label>
+         <input type="email" class="form-child">
+        </div>
+        <div>
+          <input type="submit" value="ثبت">
+        </div>
+    </form>
+  </div>
+{% endblock %}

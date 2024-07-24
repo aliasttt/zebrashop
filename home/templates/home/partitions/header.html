@@ -12,7 +12,7 @@
                 <ul class="flex-ul">
                     <li class="haeder-li"> راهنمای خرید</li>
                     <li class="haeder-li">پیگیری سفارش</li>
-                    <li class="haeder-li">تعرفه هزینهای باربری</li>
+                    <a href="{% url 'home:tarefe_barbary' %}" style="text-decoration: none;"><li class="haeder-li">تعرفه هزینهای باربری</li></a>
                 </ul>
             </nav>
         </div>
@@ -46,7 +46,7 @@
             </div>
             
             <div class="child2">
-                <a href="home/parent/login/login.html" onclick="login()"><img src="{% static 'img/sign.jpg' %}" alt="login"></a>
+                <a href= "{% url 'home:account' %}" ><img src="{% static 'img/sign.jpg' %}" alt="login"></a>
             </div>
             <div>
                 <img class="child2" src="{% static 'img/sabad.jpg' %}" alt="sabad">

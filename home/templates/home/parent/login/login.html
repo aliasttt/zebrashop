@@ -10,25 +10,39 @@
     <form action="" method="post"  class="form">
       {% csrf_token %}
       <!---{{form.as_p}}--->
+       <div style="display: flex; justify-content: center;">
+        <img class="zebra_img" src="{% static 'img/zebra.jpg' %}" alt="zebrashop">
+       </div>
        <div>
-         <label for="" class="form-child">نام:</label>
-         <input type="text" class="form-child">
+        <hr>
+       </div>
+       <div>
+        <p style="text-align: center; font-weight: bolder;" >
+          ایجاد حساب کاربری جدید
+        </p>
+       </div>
+       <div>
+        <label > </label>
+       </div>
+       <div>
+         <label for="" class="form-child"  >نام:</label>
+         <input type="text" class="form-child" name = "name" required   value="{% if form.name.value %}{{ form.name.value }}{% else %}{{ account.user.name|default:'' }}{% endif %}">
         </div>
         <div>
-         <label for="" class="form-child">نام خانوادگی</label>
-         <input type="text" class="form-child">
+         <label for="" class="form-child" >نام خانوادگی</label>
+         <input type="text" class="form-child" name = "lastname" required   value="{% if form.lastname.value %}{{ form.lastname.value }}{% else %}{{ account.user.lastname|default:'' }}{% endif %}">
         </div>
         <div>
-         <label for="" class="form-child">تلفن همراه</label>
-         <input type="number" pattern="09[0-9]{9}" class="form-child">
+         <label for="" class="form-child" >تلفن همراه</label>
+         <input type="text" pattern="09\d{9}" class="form-child" name = "phone" required  value="{% if form.phone.value %}{{ form.phone.value }}{% else %}{{ account.phone|default:'' }}{% endif %}">
         </div>
         <div>
          <label for="" class="form-child">رمز عبور</label>
-         <input type="password" class="form-child">
+         <input type="password" class="form-child" name = "password" required  value="{% if form.password.value %}{{ form.password.value }}{% else %}{{ account.password|default:'' }}{% endif %}">
         </div>
         <div>
          <label for="" class="form-child">ایمیل</label>
-         <input type="email" class="form-child">
+         <input type="email" class="form-child" name = "email"  value="{% if form.email.value %}{{ form.email.value }}{% else %}{{ account.email|default:'' }}{% endif %}">
         </div>
         <div>
           <input type="submit" value="ثبت">

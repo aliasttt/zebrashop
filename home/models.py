@@ -27,10 +27,14 @@ class Admin(models.Model):
 
 
 class Account(models.Model):
-    name = models.CharField(max_length=15)
+   
+    name = models.CharField(max_length=15,)
     lastname =models.CharField(max_length=20)
     phone = models.CharField(max_length=11)
     password =models.CharField(max_length=30)
     email = models.EmailField(null=True,blank=True)
-    publish = models.DateTimeField(default=timezone.now)
-    created = models.DateTimeField(default=timezone.now)
+    publish = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now=True)
+
+    def __self__(self):
+        return self.name + " " + self.lastname

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "home/parent/base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/tarefe_barbary.css' %}">
+{% endblock head %}
+
+{% block content %}
+<div class="header" >
+  <h1 >تعرفه هزینه های باربری </h1>
+</div>
+<div class="img_tarefe">
+  <img class="img" src="{% static 'img/tarefe.jpg' %}" alt="tarefe_barbary" >
+</div>
+{% endblock content %}

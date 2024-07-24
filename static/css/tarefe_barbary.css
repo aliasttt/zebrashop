@@ -62,27 +62,27 @@ body{
     font-style: normal;
   }
 
-.form-container{
+.header{
+    height: 200px;
+    width: calc(100%-200px);
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(233, 207, 173);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.form{
-    height: 400px;
+.img{
+    height: 300px;
     width: 500px;
-    background-color: darkgrey;
-    grid-column: auto;
-    padding-top: 20px;
-    
+
 }
 
-.zebra_img{
-    height: 70px;
-    width: 70px;
-    
-}
 
-hr{
+.img_tarefe{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
     
-    border: 1px solid chocolate;
 }

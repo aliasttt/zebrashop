@@ -63,7 +63,7 @@ body{
   }
 
 .header{
-    height: 200px;
+    height: 150px;
     width: calc(100%-200px);
     margin-left: 100px;
     margin-right: 100px;
@@ -86,3 +86,23 @@ body{
     margin-top: 100px;
     
 }
+
+.table{
+    border: 2px solid rgb(247, 230, 208);
+    border-collapse: collapse;
+    width: calc(100%-200px);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+
+}
+
+td{
+  border: 1px solid rgb(247, 230, 208) ;
+  font-weight: bold;
+}
+
+tr:hover{
+  background-color: rgb(238, 225, 216);
+}
+

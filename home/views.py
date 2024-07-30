@@ -58,3 +58,7 @@ def AccountFormViews(request):
         else:
             # Render form with validation errors
             return render(request, 'home/parent/login/login.html', {'form': form})
+
+
+def contact_us(request):
+    return render(request,'home/darbare_ma/darbare_ma.html')

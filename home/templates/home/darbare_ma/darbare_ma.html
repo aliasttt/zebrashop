@@ -6,7 +6,7 @@
 {% block head %}
 
 {% block title %}
-    <title>darbare_ma</title>
+    darbare_ma
 {% endblock title %}
     
     <link rel="stylesheet" href="{% static 'css/darbare_ma.css' %}">
@@ -16,11 +16,16 @@
 
 
 {% block content %}
+    <div class="header_darbare_ma">
+        <h2 > درباره زبرا شاپ</h2>
+
+    </div>
+    <br><br>
     <div class="contact_us_container">
-        <div>
-            <img src="{% static 'img/amir1.jpg' %}" alt="darbare_ma">
+        <div class="div_img">
+            <img class="darbare_ma_img" src="{% static 'img/amir1.jpg' %}" alt="darbare_ma">
         </div>
-        <div>
+        <div class="div_p">
             <p>
                 به صفحه «تماس با ما» خوش آمدید! در اینجا می‌توانید با تیم پشتیبانی ما ارتباط برقرار کنید و هرگونه سوال یا نیاز خود را با ما در میان بگذارید. هدف ما ارائه خدمات عالی به شماست و برای رسیدن به این هدف، بازخورد شما بسیار مهم است.
             </p>
@@ -42,4 +47,58 @@
             </p>
         </div>
     </div>
+    <br> <br>
+    <h3 style="text-align: center; color: chocolate;">آیا سوالی دارید؟</h3>
+    <h4 style="text-align: center;">رضایت شما موفقیت مارا تضمین میکند</h4>
+    <br><br>
+    <form method="post" class="contact_us_form">
+        {%csrf_token%}
+        <div class="input-name-email">
+            <div>
+        
+            <input class="name" type="text" required name="name" placeholder="نام و نام خانوادگی">
+            </div>
+            
+            <div>
+            
+            <input type="email" required name="email" placeholder="ایمیل">
+            </div>
+        </div>
+        <br><br>
+        <div>
+            
+            <input class="subject" type="text" maxlength="15" name="subject" placeholder="موضوع" >
+        </div>
+        <br> <br>
+        <div>
+            
+            <textarea name="text" placeholder="پیام"></textarea>
+        </div>
+        
+        <div>
+            <input type="submit" value="ارسال پیام">
+        </div>
+
+    </form>
+
+    {% if form.errors %}
+        <h3>لطفا اررور های زیر را بررسی کنید</h3>
+        <br>
+        {% for field in form  %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                  {{field.errors }}:{{error}}
+                {% endfor %}
+              
+            {% endif %}
+          
+        {% endfor %}
+      
+    {% endif %}
+
+    {% if form.non_field_errors %}
+        {{form.non_field_errors}}
+      
+    {% endif %}
+    
 {% endblock content %}

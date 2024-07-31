@@ -1,5 +1,86 @@
-.contact_us_container{
+.header_darbare_ma{
+    height: 100px;
+    width: calc(100% - 200px);
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color:rgb(233, 207, 173) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    float: left !important;
+    height: 100px !important ;
+    width: 100px !important;
+    margin-left: 100px !important;
+}
+p{
+    font-weight: bold;
+}
+
+.contact_us_form{
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    width: calc(100%-200px);
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.name{
+    width: 500px; 
+    height: 40px; 
+    padding: 10px; 
+    font-size: 16px; 
+}
+.subject{
+    width: 100%; 
+    height: 40px; 
+    padding: 10px; 
+    font-size: 16px;
+}
+
+input[type="email"] {
+    width: 550px; 
+    height: 40px; 
+    padding: 10px; 
+    font-size: 16px; 
+}
+
+input[type="submit"] {
+    width: 100%; 
+    height: 40px; 
+    padding: 10px; 
+    font-size: larger;
+    background-color: darkslategray;
+    color: aliceblue; 
+}
+
+
+input[type="text"]::placeholder {
+    font-size: larger
+}
+
+input[type="email"]::placeholder {
+    font-size: larger
+}
+
+textarea{
+
+    width: 100%; 
+    height: 200px; 
+    padding: 10px; 
+    font-size: 16px;    
+}
+textarea::placeholder{
+    font-size: larger;
+    font-weight: bold;
+}
+.input-name-email{
     display: flex;
     flex-direction: row;
-    
+    justify-content: space-between;
 }

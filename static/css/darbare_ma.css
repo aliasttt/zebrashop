@@ -84,3 +84,9 @@ textarea::placeholder{
     flex-direction: row;
     justify-content: space-between;
 }
+
+.successfully{
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(95, 236, 95);
+}

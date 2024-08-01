@@ -1,8 +1,9 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
-from home.forms import AccountForm
+from home.forms import EmailForm,AccountForm
 from django.contrib.auth.models import User
 from .models import Account
+from django.core.mail import send_mail
 
 def demo(request):
     return HttpResponse("hello its the first step of zebra shop")
@@ -16,6 +17,12 @@ def loginhtml(request):
 
 def tarefe_barbary(request):
     return render(request,'home/tarefe_barbary/tarefe_barbary.html')
+
+def soalat_motadavel(request):
+    return render(request,'home/omur_moshtarian/soalat_motadavel.html')
+
+def ghavanin(request):
+    return render(request,'home/omur_moshtarian/ghavanin.html')
 
 def AccountFormViews(request):
     # Handle GET request to initialize the form
@@ -61,4 +68,20 @@ def AccountFormViews(request):
 
 
 def contact_us(request):
-    return render(request,'home/darbare_ma/darbare_ma.html')
+    send = False
+    if request.method =="POST":
+        form = EmailForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            text = form.cleaned_data['text']
+            msg = "name :{0}\n subject:{1}\nemail:{2}\ntext{3}".format(name,subject,email,text)
+            send_mail(name,msg , "aliasadi3853@gmail.com" ,['aliasadi3853@gmail.com'],fail_silently=False)
+            send = True
+            return render(request,'home/darbare_ma/darbare_ma.html',{'form':form , 'send': send})
+
+    else:    
+        form = EmailForm()
+
+    return render(request,'home/darbare_ma/darbare_ma.html',{'form':form , 'send': send})

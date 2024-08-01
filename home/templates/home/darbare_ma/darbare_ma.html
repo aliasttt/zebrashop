@@ -56,23 +56,23 @@
         <div class="input-name-email">
             <div>
         
-            <input class="name" type="text" required name="name" placeholder="نام و نام خانوادگی">
+            <input class="name" type="text" required name="name" placeholder="نام و نام خانوادگی" value="{% if form.name.value %}{{ form.name.value }}{% else %}{{ account.user.name|default:'' }}{% endif %}">
             </div>
             
             <div>
             
-            <input type="email" required name="email" placeholder="ایمیل">
+            <input type="email" required name="email" placeholder="ایمیل" value="{{ form.email.value|default:'' }}" >
             </div>
         </div>
         <br><br>
         <div>
             
-            <input class="subject" type="text" maxlength="15" name="subject" placeholder="موضوع" >
+            <input class="subject" type="text" maxlength="15" name="subject" placeholder="موضوع" value="{{ form.subject.value|default:'' }}">
         </div>
         <br> <br>
         <div>
             
-            <textarea name="text" placeholder="پیام"></textarea>
+            <textarea name="text" placeholder="پیام"  ></textarea>
         </div>
         
         <div>
@@ -80,6 +80,11 @@
         </div>
 
     </form>
+    <p class="successfully">
+        {% if send %}
+            پیام شما با موفقیت ثبت شد
+        {% endif %}
+    </p>
 
     {% if form.errors %}
         <h3>لطفا اررور های زیر را بررسی کنید</h3>

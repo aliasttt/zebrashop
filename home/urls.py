@@ -12,5 +12,6 @@ urlpatterns = [
     path('login',views.AccountFormViews,name="account"),
     path('darbare_ma',views.contact_us,name='contact_us'),
     path('soalat_motadavel',views.soalat_motadavel,name="soalat_motadavel"),
-    path('ghavanin_moghararat',views.ghavanin,name="ghavanin")
+    path('ghavanin_moghararat',views.ghavanin,name="ghavanin"),
+    path('shiveh_pardakht',views.siveh_pardakht,name='shiveh_pardakht')
 ]

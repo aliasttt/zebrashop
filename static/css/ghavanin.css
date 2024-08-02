@@ -1,0 +1,26 @@
+.ghavanin_header{
+    height: 150px;
+    width: calc(100% - 200px);
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(233, 207, 173);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ghavanin_text_header{
+    text-align: center;
+    color: rgb(211, 137, 83);
+    font-family: 'vazir';
+}
+
+.ghavanin_text_body{
+    font-weight: bold;
+    color: gray;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'vazir';
+    font-size: 16px;
+    direction: rtl;
+}

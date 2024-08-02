@@ -24,6 +24,9 @@ def soalat_motadavel(request):
 def ghavanin(request):
     return render(request,'home/omur_moshtarian/ghavanin.html')
 
+def siveh_pardakht(request):
+    return render(request,'home/omur_moshtarian/shiveh_pardakht.html')
+
 def AccountFormViews(request):
     # Handle GET request to initialize the form
     if request.method == 'GET':

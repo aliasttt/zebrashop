@@ -1,9 +1,10 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render , redirect,get_object_or_404
 from django.http import HttpResponse
-from home.forms import EmailForm,AccountForm
+from home.forms import *
 from django.contrib.auth.models import User
-from .models import Account
+from .models import *
 from django.core.mail import send_mail
+from taggit.models import Tag
 
 def demo(request):
     return HttpResponse("hello its the first step of zebra shop")
@@ -26,6 +27,8 @@ def ghavanin(request):
 
 def siveh_pardakht(request):
     return render(request,'home/omur_moshtarian/shiveh_pardakht.html')
+
+
 
 def AccountFormViews(request):
     # Handle GET request to initialize the form
@@ -88,3 +91,44 @@ def contact_us(request):
         form = EmailForm()
 
     return render(request,'home/darbare_ma/darbare_ma.html',{'form':form , 'send': send})
+
+
+
+
+def productviews(request, slug, pk):
+    product = get_object_or_404(Product, slug=slug, id=pk)
+    comments = product.comments.filter(active=True)
+
+    new_comment = None
+
+    if request.method == 'POST':
+        comment_form = Commentsform(data=request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.Product = product
+            new_comment.save()
+    else:
+        comment_form = Commentsform()
+
+    context = {
+        'product': product,
+        'comments': comments,
+        'new_comment': new_comment,
+        'comment_form': comment_form,
+    }
+
+    return render(request, 'home/menu/mardane.html', context)
+    
+
+def product_list(request):
+    tags = Tag.objects.all()
+    products = Product.objects.all()
+    #products = get_object_or_404(Product,) 
+
+    selected_tag = request.GET.get('tag')
+    if selected_tag:
+        products = products.filter(tags__name__in=[selected_tag])
+
+    return render(request, 'home/menu/mardane.html', {'products': products, 'tags': tags})
+
+

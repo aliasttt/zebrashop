@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'taggit'# its for tag
 ]
 
 MIDDLEWARE = [
@@ -119,3 +121,11 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'aliasadi3853@gmail.com'
 EMAIL_HOST_PASSWORD = 'bnyjyrnrbzmvzamx'
 EMAIL_USE_TLS = True
+
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
